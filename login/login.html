@@ -37,17 +37,17 @@
             <center id="">
                 <h1>Sign In</h1>
             </center>
-            <div class="form-group">
+            <div class="form-group  needs-validation" >
                 <label for="input-email">Email</label>
                 <input id="input-email" aria-describedby="emailHelp" placeholder="Enter Email" type="email"
-                    name="input-email" class="form-control">
-                <small class="form-text text-muted" , id="emailHelp">We'll never share your email with anyone
+                    name="input-email" class="form-control In-valid" required>
+                <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone
                     else.</small>
 
 
-                <div class="form-group">
+                <div action="login/login.html" class="form-group">
                     <label for="inputpassword">Password</label>
-                    <input type="password" for="inputpassword" class="form-control" id="inputpassword">
+                    <input type="password" for="inputpassword" class="form-control In-valid-feedback" id="inputpassword">
                 </div>
 
 
@@ -56,7 +56,9 @@
                     <label for="class-check-label1" for="checkbox-input"> check me out</label>
                 </div>
 
-                <button type="submit" , class="btn btn-primary"> Submit</button>
+                <button class="btn btn-primary btn-outline-success"
+                    onclick="location.href='login/tables/table.html'" type="submit">
+                    Submit</button></a>
             </div>
 
         </div>
@@ -69,8 +71,13 @@
 
 
         <!-- ------------------------------After hitting submit button on login Page-------------------------         -->
-        
 
+        <div class="after-submit-button">
+            <div class="Products">Products</div>
+            <div class="Selling-point">Selling point</div>
+            <div class="Remaining-Product">Remaining Product</div>
+            <div class="Sale-products">Sale Products</div>
+        </div>
 
 
 </body>
