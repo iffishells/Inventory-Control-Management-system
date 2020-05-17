@@ -10,40 +10,42 @@ app.use(express.static("public"));
 // thats why we move to these file in the public folder
 // and set the path according to this like public -> css ->style.css
 
+
+const DataBase = {
+
+  user : [
+    {
+    user_email : "iffishells@gmail.com",
+    user_pass : "gmail786"
+  
+    },
+    {
+      user_email : "123@gmail.com",
+      user_pass : "123"
+    }
+  ]
+}
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.sendfile(__dirname + "/login.html");
+  res.sendFile(__dirname + "/login.html");
 });
 
-app.post("/", function (req, resp) {
-  var user_email = req.body.input_email;
-  var lastName = req.body.pass;
+app.post("/", function (req, resp ) {
 
-  var userEmail = req.body.email;
+    var user_email = req.body.input_email;
+    var user_pass = req.body.pass;
 
-  console.log(firstName, lastName, userEmail);
+    console.log(user_email)
+    console.log(user_pass)
 
-  // https request data
-  const mcData = {
-    members: [
-      {
-        email: userEmail,
-        status: "pending",
-      },
-    ],
-  };
-  const mcDataPost = JSON.stringify(mcData);
-
-  const options = {
-    url: "",
-    method: "POST",
-    headers: {
-      Authorization: "auth..",
-    },
-  };
-  request(options, function (errors, resp, body) {});
-  // console.log(fname ,lname , email)
+    if(user_email === DataBase.user[0].user_email && user_pass === DataBase.user[0].user_pass ){
+      console.log("succed")
+    }else{
+      console.log("please Try again ")
+    }
 });
 app.listen(3000, function (req, resp) {
   console.log("server is running at the 3000 port");
