@@ -31,29 +31,30 @@ app.use(express.static(__dirname + '/public'));
 //   ]
 // }
 
-console.log(__dirname)
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/login.html");
+  console.log(__dirname)
+  res.sendFile(__dirname + "public/login.html");
   console.log("---------login file has been passed")
 });
 
 
 app.get("/register.html", function (req, res) {
-  res.sendFile(__dirname + "/register.html");
-  console.log("---------login file has been passed")
+  res.sendFile(__dirname + "public/register.html");
+  console.log("---------register file has been passed")
 });
 
 
 app.get("/index.html", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
-  console.log("---------login file has been passed")
+  res.sendFile(__dirname + "public/index.html");
+  console.log("---------index file has been passed")
 });
 
 
 app.get("/login.html", function (req, res) {
-  res.sendFile(__dirname + "/login.html");
+  res.sendFile(__dirname + "public/login.html");
   console.log("---------login file has been passed")
 });
 
