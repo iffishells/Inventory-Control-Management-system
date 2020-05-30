@@ -21,13 +21,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 //   database: 'project'
 // });
 
-// connection.connect(function (error) {
-//   if (!!error) {
-//     console.log("Error in the connection");
-//   } else {
-//     console.log("Database connected")
-//   }
-// });
+connection.connect(function (error) {
+  if (!!error) {
+    console.log("Error in the connection");
+  } else {
+    console.log("Database connected")
+  }
+});
 
 
 
@@ -48,13 +48,13 @@ app.post("/", function (req, res) {
 
   console.log(res.body.input_email)
 
-  // connection.query('Select * from tablename ', function (error, rows, fields) {
-  //   if (!!error) {
-  //     console.log("Error in the Query");
-  //   } else {
-  //     console.log("query successfull");
-  //     console.log(rows);
-  //     res.send(rows);
+  connection.query('Select * from tablename ', function (error, rows, fields) {
+    if (!!error) {
+      console.log("Error in the Query");
+    } else {
+      console.log("query successfull");
+      console.log(rows);
+      res.send(rows);
 
   //   }
   })

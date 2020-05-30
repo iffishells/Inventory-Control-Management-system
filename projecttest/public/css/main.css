@@ -1,0 +1,30 @@
+body {
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(141, 88, 209, 0.8243626062322946) 44%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.navbar-brand {
+  color: white;
+}
+
+#selling_point ,#store_Data ,#products
+{
+  padding: 5rem 5rem 5rem 5rem;
+  color: white;
+  border-color:white
+}
+
+.container
+{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr ;
+  margin-top: 10%;
+  grid-gap: 1rem;
+  
+  color:white;  
+}

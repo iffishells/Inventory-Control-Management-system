@@ -17,7 +17,7 @@
         </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/css/login.css">
 
 
     <title>Login</title>
@@ -26,7 +26,7 @@
 <body>
 
 
-    <form class="login-page" action="/"  method="POST">
+    <form class="login-page" action="/" method="POST">
 
         <div class="right-side">
             <div class="inner-right-side">
@@ -63,15 +63,20 @@
 
                 <div class="button_class">
                     <div>
-                        <input type="submit" name="submit" id="log-submit" class="btn btn-outline-secondary btn-lg ">
+                        <input  type="submit" name="submit"  id="log-submit"
+                            class="btn btn-outline-secondary btn-lg ">
+                        <!-- <a href="main.html" id="products" class="btn btn-outline-secondary btn-lg" tabindex="-1"
+                            role="button">
+                            submit</a> -->
+
                     </div>
-                    
+
                     <div>
                         <a href="register.html" id="register" class="btn btn-outline-secondary btn-lg" tabindex="-1"
                             role="button">
                             Registration</a>
 
-                        
+
                     </div>
                 </div>
 
@@ -81,14 +86,19 @@
 
 
 
+        <script>
+            function callfun() {
+                console.log("function has been called");
+            }
+
+        </script>
 
 
 
 
 
-        
 
-        
+
 
 </body>
 
