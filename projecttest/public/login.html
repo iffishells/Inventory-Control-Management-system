@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="login.css">
+
+
+    <title>Login</title>
+</head>
+
+<body>
+
+
+    <form class="login-page" action="/"  method="POST">
+
+        <div class="right-side">
+            <div class="inner-right-side">
+                <h2>Inventory control Management System</h2>
+            </div>
+
+        </div>
+
+        <!-- -----------------------------Login-Page---------------------------------- -->
+        <div class="left-side">
+            <!-- <button h type="button" class="btn btn-outline-secondary btn-lg" id=register>Register</button> -->
+            <center id="">
+                <h1>Sign In</h1>
+            </center>
+            <div class="form-group  needs-validation">
+                <label for="input-email">Email</label>
+                <input id="input-email" aria-describedby="emailHelp" placeholder="Enter Email" type="email"
+                    name="input_email" class="form-control In-valid" required>
+                <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone
+                    else.</small>
+
+
+                <div action="login/login.html" class="form-group">
+                    <label for="inputpassword">Password</label>
+                    <input type="password" placeholder="Password" autocomplete="address-level2" for="inputpassword"
+                        name="pass" class="form-control In-valid-feedback" id="inputpassword">
+                </div>
+
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="checkbox-input">
+                    <label for="class-check-label1" for="checkbox-input"> check me out</label>
+                </div>
+
+                <div class="button_class">
+                    <div>
+                        <input type="submit" name="submit" id="log-submit" class="btn btn-outline-secondary btn-lg ">
+                    </div>
+                    
+                    <div>
+                        <a href="register.html" id="register" class="btn btn-outline-secondary btn-lg" tabindex="-1"
+                            role="button">
+                            Registration</a>
+
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        
+
+        
+
+</body>
+
+</html>

@@ -1,44 +1,73 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const request = require("request");
-const pathjoin = require('path.join')
-
+const mysql = require('mysql');
 const app = express();
 
+
 app.use(express.static(__dirname + '/public'));
-
-
-
-
 // public when we load the file on the localhost
 // tha these static file would not upload there
 // thats why we move to these file in the public folder
 // and set the path according to this like public -> css ->style.css
+app.use(bodyParser.urlencoded({extended: true}));
+
+//connection to Database
 
 
-// const DataBase = {
-
-//   user: [{
-//       user_email: "iffishells@gmail.com",
-//       user_pass: "gmail786"
-//     },
-//     {
-//       user_email: "123@gmail.com",
-//       user_pass: "123"
-//     }
-//   ]
-// }
-
-
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
-// app.get("/", function (req, res) {
-//   console.log(__dirname)
-//   res.sendFile(__dirname + "/public/login.html");
-//   console.log("---------login file has been passed")
+// var connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'murti123',
+//   database: 'project'
 // });
+
+// connection.connect(function (error) {
+//   if (!!error) {
+//     console.log("Error in the connection");
+//   } else {
+//     console.log("Database connected")
+//   }
+// });
+
+
+
+
+
+
+app.get("/", function (req, res) {
+  console.log("        Now working on the login.html file            ");
+  res.sendFile(__dirname + "/public/login.html");
+});
+
+
+
+
+app.post("/", function (req, res) {
+  console.log("        Now working on the login.html file            ");
+  // res.sendFile(__dirname + "/public/login.html");
+
+  console.log(res.body.input_email)
+
+  // connection.query('Select * from tablename ', function (error, rows, fields) {
+  //   if (!!error) {
+  //     console.log("Error in the Query");
+  //   } else {
+  //     console.log("query successfull");
+  //     console.log(rows);
+  //     res.send(rows);
+
+  //   }
+  })
+
+
+
+
+
+
+// });
+
+
+
 
 
 // app.get("/register.html", function (req, res) {
@@ -48,11 +77,13 @@ app.use(bodyParser.urlencoded({
 // });
 
 
-// app.get("/index.html", function (req, res) {
+// app.get("/products.html", function (req, res) {
 //   console.log("---------index file has been passed");
-//   res.sendFile(__dirname + "public/index.html");
+//   res.sendFile(__dirname + "public/products.html");
 
 // });
+
+
 
 
 // app.get("/login.html", function (req, res) {
